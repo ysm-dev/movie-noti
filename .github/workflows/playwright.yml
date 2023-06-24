@@ -17,6 +17,10 @@ jobs:
       - uses: pnpm/action-setup@v2
         with:
           version: latest
+
+      - name: Install Korean fonts
+        run: sudo apt-get install fonts-noto-cjk
+
       - name: Install dependencies
         run: pnpm install
 

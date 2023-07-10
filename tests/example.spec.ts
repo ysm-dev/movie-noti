@@ -39,9 +39,15 @@ test('has title', async ({ context, page }) => {
         body,
       }).then((res) => res.json()),
     ),
-
     concurrent(2),
     map((data) => `https://${data.value.cid}.ipfs.cf-ipfs.com`),
+    toArray,
+  )
+
+  await pipe(
+    urls,
+    toAsync,
+    map((url) => fetch(url)),
     toArray,
   )
 

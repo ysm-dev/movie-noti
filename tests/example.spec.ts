@@ -4,7 +4,7 @@ import { TOKENS, getRandom } from './getRandom'
 import { pipe, map, toArray, tap, toAsync, concurrent } from '@fxts/core'
 import { sendDiscordMessage } from './sendDiscordMessage'
 
-test('has title', async ({ context, page }) => {
+test('Screenshot movie info and send discord message', async ({ context, page }) => {
   const page1 = await context.newPage()
   const page2 = await context.newPage()
 
@@ -12,6 +12,13 @@ test('has title', async ({ context, page }) => {
     page1.goto(`https://search.naver.com/search.naver?query=현재상영영화`),
     page2.goto(`https://search.naver.com/search.naver?query=개봉예정영화`),
   ])
+
+  const remove = () => {
+    const element = document.querySelector('#header_wrap')
+    element?.remove()
+  }
+
+  await Promise.all([page1.evaluate(remove), page2.evaluate(remove)])
 
   await Promise.all([
     page1

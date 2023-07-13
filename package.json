@@ -1,5 +1,5 @@
 {
-  "name": "playwright-test",
+  "name": "movie-noti",
   "engines": {
     "pnpm": ">= 8",
     "node": ">= 18"
@@ -16,7 +16,7 @@
     "@types/node": "20.2.5",
     "carbites": "1.0.6",
     "dotenv": "16.1.4",
-    "files-from-path": "^1.0.0",
+    "files-from-path": "1.0.0",
     "ipfs-car": "1.0.0",
     "playwright-extra": "4.3.6",
     "puppeteer-extra-plugin-stealth": "2.11.2",

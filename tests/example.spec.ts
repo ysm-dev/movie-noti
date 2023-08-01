@@ -4,7 +4,10 @@ import { TOKENS, getRandom } from './getRandom'
 import { pipe, map, toArray, tap, toAsync, concurrent } from '@fxts/core'
 import { sendDiscordMessage } from './sendDiscordMessage'
 
-test('Screenshot movie info and send discord message', async ({ context, page }) => {
+test('Screenshot movie info and send discord message', async ({
+  context,
+  page,
+}) => {
   const page1 = await context.newPage()
   const page2 = await context.newPage()
 
@@ -47,14 +50,17 @@ test('Screenshot movie info and send discord message', async ({ context, page })
       }).then((res) => res.json()),
     ),
     concurrent(2),
-    map((data) => `https://${data.value.cid}.ipfs.cf-ipfs.com`),
+    map((data) => `https://${data.value.cid}.ipfs.dweb.link`),
     toArray,
   )
+
+  console.log(urls)
 
   await pipe(
     urls,
     toAsync,
     map((url) => fetch(url)),
+    concurrent(urls.length),
     toArray,
   )
 

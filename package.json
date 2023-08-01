@@ -12,15 +12,15 @@
     "@playwright/test": "latest"
   },
   "dependencies": {
-    "@fxts/core": "0.16.0",
-    "@types/node": "20.2.5",
+    "@fxts/core": "0.18.0",
+    "@types/node": "20.4.5",
     "carbites": "1.0.6",
-    "dotenv": "16.1.4",
+    "dotenv": "16.3.1",
     "files-from-path": "1.0.0",
     "ipfs-car": "1.0.0",
     "playwright-extra": "4.3.6",
     "puppeteer-extra-plugin-stealth": "2.11.2",
     "tsx": "3.12.7",
-    "zx": "7.2.2"
+    "zx": "7.2.3"
   }
 }

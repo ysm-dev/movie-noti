@@ -22,7 +22,7 @@ jobs:
         run: sudo apt-get install fonts-noto-cjk
 
       - name: Install dependencies
-        run: pnpm install -f
+        run: pnpm i --fix-lockfile -f
 
       - name: Install Playwright Browsers
         run: pnpx playwright install

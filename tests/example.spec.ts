@@ -3,6 +3,7 @@ import { readFile, readdir } from 'fs/promises'
 import { TOKENS, getRandom } from './getRandom'
 import { pipe, map, toArray, tap, toAsync, concurrent } from '@fxts/core'
 import { sendDiscordMessage } from './sendDiscordMessage'
+import { uploadIPFS } from './uploadIPFS'
 
 test('Screenshot movie info and send discord message', async ({
   context,
@@ -35,21 +36,13 @@ test('Screenshot movie info and send discord message', async ({
   await page1.close()
   await page2.close()
 
+  const paths = [`./temp/current.png`, `./temp/future.png`]
+
   const urls = await pipe(
-    [`./temp/current.png`, `./temp/future.png`],
+    paths,
     toAsync,
-    map(readFile),
-    map((body) =>
-      fetch('https://api.nft.storage/upload/', {
-        headers: {
-          authorization: `Bearer ${getRandom(TOKENS)}`,
-          'content-type': 'image/png',
-        },
-        method: 'POST',
-        body,
-      }).then((res) => res.json()),
-    ),
-    concurrent(2),
+    map(uploadIPFS),
+    concurrent(paths.length),
     map((data) => `https://${data.value.cid}.ipfs.dweb.link`),
     toArray,
   )

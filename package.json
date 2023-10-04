@@ -1,7 +1,6 @@
 {
   "name": "movie-noti",
   "engines": {
-    "pnpm": ">= 8",
     "node": ">= 18"
   },
   "type": "module",

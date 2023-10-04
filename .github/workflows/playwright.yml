@@ -1,4 +1,4 @@
-name: Playwright Tests
+name: Send Movies
 
 on:
   schedule:
@@ -13,24 +13,24 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
+      - uses: actions/checkout@master
+      - uses: oven-sh/setup-bun@main
         with:
-          version: latest
+          bun-version: latest
 
       - name: Install Korean fonts
         run: sudo apt-get install fonts-noto-cjk
 
       - name: Install dependencies
-        run: pnpm i --fix-lockfile -f
+        run: bun i -f
 
       - name: Install Playwright Browsers
-        run: pnpx playwright install
+        run: bunx playwright install
 
       - name: Run Playwright tests
-        run: pnpm exec playwright test
+        run: bun run test
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@main
         if: always()
         with:
           name: playwright-report

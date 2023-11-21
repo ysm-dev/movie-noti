@@ -1,7 +1,7 @@
 import { concurrent, map, pipe, toArray, toAsync } from "@fxts/core"
 import { expect, test } from "@playwright/test"
 import { sendDiscordMessage } from "./sendDiscordMessage"
-import { uploadIPFS } from "./uploadIPFS"
+import { getIPFSURL, uploadIPFS } from "./uploadIPFS"
 
 test("Screenshot movie info and send discord message", async ({
   context,
@@ -9,6 +9,8 @@ test("Screenshot movie info and send discord message", async ({
 }) => {
   const page1 = await context.newPage()
   const page2 = await context.newPage()
+
+  console.log("Go to naver.com...")
 
   await Promise.all([
     page1.goto(`https://search.naver.com/search.naver?query=현재상영영화`),
@@ -36,14 +38,18 @@ test("Screenshot movie info and send discord message", async ({
 
   const paths = [`./temp/current.png`, `./temp/future.png`]
 
+  console.log("Uploading to IPFS...")
+
   const urls = await pipe(
     paths,
     toAsync,
     map(uploadIPFS),
     concurrent(paths.length),
-    map((data) => `https://${data.value.cid}.ipfs.dweb.link`),
+    map(({ value: { cid } }) => getIPFSURL(cid)),
     toArray,
   )
+
+  console.log("Sending Discord message...")
 
   await sendDiscordMessage("#movie", urls[0])
   await sendDiscordMessage("#movie", urls[1])

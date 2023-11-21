@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "playwright test",
-    "clean": "rm -rf node_modules playwright-report",
+    "clean": "rm -rf node_modules playwright-report test-results",
     "pkg:bump": "bunx ncu -u",
     "pkg:check": "bunx ncu"
   },

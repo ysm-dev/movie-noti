@@ -1,0 +1,4 @@
+{
+  "plugins": ["@vercel/style-guide/prettier"],
+  "semi": false
+}

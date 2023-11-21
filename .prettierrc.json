@@ -1,4 +1,5 @@
 {
   "plugins": ["@vercel/style-guide/prettier"],
-  "semi": false
+  "semi": false,
+  "singleQuote": true
 }

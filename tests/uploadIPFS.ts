@@ -1,15 +1,15 @@
-import { readFile } from "fs/promises"
-import { TOKENS, getRandom } from "./getRandom"
+import { readFile } from 'fs/promises'
+import { TOKENS, getRandom } from './getRandom'
 
 export const uploadIPFS = async (path: string) => {
   const body = await readFile(path)
 
-  const data = await fetch("https://api.nft.storage/upload", {
+  const data = await fetch('https://api.nft.storage/upload', {
     headers: {
       authorization: `Bearer ${getRandom(TOKENS)}`,
-      "content-type": "image/png",
+      'content-type': 'image/png',
     },
-    method: "POST",
+    method: 'POST',
     body,
   })
     .then<Response>((r) => r.json())

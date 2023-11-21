@@ -1,16 +1,16 @@
-import { concurrent, map, pipe, toArray, toAsync } from "@fxts/core"
-import { expect, test } from "@playwright/test"
-import { sendDiscordMessage } from "./sendDiscordMessage"
-import { getIPFSURL, uploadIPFS } from "./uploadIPFS"
+import { concurrent, map, pipe, toArray, toAsync } from '@fxts/core'
+import { expect, test } from '@playwright/test'
+import { sendDiscordMessage } from './sendDiscordMessage'
+import { getIPFSURL, uploadIPFS } from './uploadIPFS'
 
-test("Screenshot movie info and send discord message", async ({
+test('Screenshot movie info and send discord message', async ({
   context,
   page,
 }) => {
   const page1 = await context.newPage()
   const page2 = await context.newPage()
 
-  console.log("Go to naver.com...")
+  console.log('Go to naver.com...')
 
   await Promise.all([
     page1.goto(`https://search.naver.com/search.naver?query=현재상영영화`),
@@ -18,7 +18,7 @@ test("Screenshot movie info and send discord message", async ({
   ])
 
   const remove = () => {
-    const element = document.querySelector("#header_wrap")
+    const element = document.querySelector('#header_wrap')
     element?.remove()
   }
 
@@ -26,10 +26,10 @@ test("Screenshot movie info and send discord message", async ({
 
   await Promise.all([
     page1
-      .locator("._au_movie_list_content_wrap")
+      .locator('._au_movie_list_content_wrap')
       .screenshot({ path: `./temp/current.png` }),
     page2
-      .locator("._au_movie_list_content_wrap")
+      .locator('._au_movie_list_content_wrap')
       .screenshot({ path: `./temp/future.png` }),
   ])
 
@@ -38,7 +38,7 @@ test("Screenshot movie info and send discord message", async ({
 
   const paths = [`./temp/current.png`, `./temp/future.png`]
 
-  console.log("Uploading to IPFS...")
+  console.log('Uploading to IPFS...')
 
   const urls = await pipe(
     paths,
@@ -49,12 +49,12 @@ test("Screenshot movie info and send discord message", async ({
     toArray,
   )
 
-  console.log("Sending Discord message...")
+  console.log('Sending Discord message...')
 
-  await sendDiscordMessage("#movie", urls[0])
-  await sendDiscordMessage("#movie", urls[1])
+  await sendDiscordMessage('#movie', urls[0])
+  await sendDiscordMessage('#movie', urls[1])
 
-  console.log("DONE!!!")
+  console.log('DONE!!!')
 
   expect(1).toBe(1)
 })

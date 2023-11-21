@@ -4,15 +4,15 @@ export const sendDiscordMessage = (
 ) => {
   const key = channelMap[channel.slice(1) as keyof typeof channelMap]
   return fetch(`https://discord.com/api/webhooks/${key}`, {
-    method: "POST",
+    method: 'POST',
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify(
-      typeof message === "string" ? { content: message } : message,
+      typeof message === 'string' ? { content: message } : message,
     ),
   }).catch(() => {
-    console.error("Failed to send Discord message", message)
+    console.error('Failed to send Discord message', message)
   })
 }
 

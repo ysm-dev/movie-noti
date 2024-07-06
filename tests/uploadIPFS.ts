@@ -3,8 +3,12 @@ import 'dotenv/config'
 import CID from 'cids'
 import { readFile } from 'fs/promises'
 
-const THIRDWEB_CLIENT_ID = process.env.THIRDWEB_CLIENT_ID!
-const THIRDWEB_ORIGIN = process.env.THIRDWEB_ORIGIN!
+const THIRDWEB_CLIENT_ID = process.env.THIRDWEB_CLIENT_ID
+const THIRDWEB_ORIGIN = process.env.THIRDWEB_ORIGIN
+
+if (!THIRDWEB_CLIENT_ID || !THIRDWEB_ORIGIN) {
+  throw new Error('Missing THIRDWEB_CLIENT_ID or THIRDWEB_ORIGIN')
+}
 
 export const uploadIPFS = async (filePath: string) => {
   const formData = new FormData()

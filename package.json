@@ -1,21 +1,26 @@
 {
   "name": "movie-noti",
   "engines": {
-    "node": ">= 20"
+    "node": ">= 22"
   },
   "type": "module",
   "scripts": {
     "test": "playwright test",
     "clean": "rm -rf node_modules playwright-report test-results",
-    "pkg:bump": "bunx ncu -u",
-    "pkg:check": "bunx ncu"
+    "check": "taze major",
+    "bump": "taze major -w -i"
   },
   "devDependencies": {
-    "@fxts/core": "latest",
-    "@playwright/test": "latest",
-    "@types/node": "latest",
-    "@vercel/style-guide": "latest",
-    "prettier": "latest",
-    "typescript": "latest"
+    "@fxts/core": "^1.0.1",
+    "@playwright/test": "^1.45.1",
+    "@types/node": "^20.14.10",
+    "@vercel/style-guide": "^6.0.0",
+    "prettier": "^3.3.2",
+    "taze": "^0.14.2",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "cids": "^1.1.9",
+    "dotenv": "^16.4.5"
   }
 }

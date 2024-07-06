@@ -29,6 +29,9 @@ jobs:
 
       - name: Run Playwright tests
         run: bun run test
+        env:
+          THIRDWEB_CLIENT_ID: ${{ secrets.THIRDWEB_CLIENT_ID }}
+          THIRDWEB_ORIGIN: ${{ secrets.THIRDWEB_ORIGIN }}
 
       - uses: actions/upload-artifact@main
         if: always()

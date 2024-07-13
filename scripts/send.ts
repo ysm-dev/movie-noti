@@ -5,11 +5,11 @@ async function main() {
 
   await sendDiscordMessage(
     '#movie',
-    `https://github.com/ysm-dev/movie-noti/raw/main/temp/${currentDate}.png`,
+    `https://github.com/ysm-dev/movie-noti/raw/main/temp/${currentDate}-current.png`,
   )
   await sendDiscordMessage(
     '#movie',
-    `https://github.com/ysm-dev/movie-noti/raw/main/temp/${currentDate}.png`,
+    `https://github.com/ysm-dev/movie-noti/raw/main/temp/${currentDate}-future.png`,
   )
 }
 

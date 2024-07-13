@@ -26,10 +26,10 @@ test('Screenshot movie info and send discord message', async ({
   await Promise.all([
     page1
       .locator('._au_movie_list_content_wrap')
-      .screenshot({ path: `./temp/${currentDate}.png` }),
+      .screenshot({ path: `./temp/${currentDate}-current.png` }),
     page2
       .locator('._au_movie_list_content_wrap')
-      .screenshot({ path: `./temp/${currentDate}.png` }),
+      .screenshot({ path: `./temp/${currentDate}-future.png` }),
   ])
 
   await page1.close()

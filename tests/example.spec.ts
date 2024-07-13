@@ -1,7 +1,4 @@
-import { concurrent, map, pipe, toArray, toAsync } from '@fxts/core'
 import { expect, test } from '@playwright/test'
-import { sendDiscordMessage } from './sendDiscordMessage'
-import { getIPFSURL, uploadIPFS } from './uploadIPFS'
 
 test('Screenshot movie info and send discord message', async ({
   context,
@@ -35,24 +32,6 @@ test('Screenshot movie info and send discord message', async ({
 
   await page1.close()
   await page2.close()
-
-  const paths = [`./temp/current.png`, `./temp/future.png`]
-
-  console.log('Uploading to IPFS...')
-
-  const urls = await pipe(
-    paths,
-    toAsync,
-    map(uploadIPFS),
-    concurrent(paths.length),
-    map(({ value: { cid } }) => getIPFSURL(cid)),
-    toArray,
-  )
-
-  console.log('Sending Discord message...')
-
-  await sendDiscordMessage('#movie', urls[0])
-  await sendDiscordMessage('#movie', urls[1])
 
   console.log('DONE!!!')
 

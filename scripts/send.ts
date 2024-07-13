@@ -1,15 +1,15 @@
 import { sendDiscordMessage } from '../tests/sendDiscordMessage'
 
 async function main() {
-  const randomString = Math.random().toString(36).substring(7)
+  const currentDate = new Date().toISOString().split('T')[0]
 
   await sendDiscordMessage(
     '#movie',
-    `https://github.com/ysm-dev/movie-noti/raw/main/temp/current.png?${randomString}`,
+    `https://github.com/ysm-dev/movie-noti/raw/main/temp/${currentDate}.png`,
   )
   await sendDiscordMessage(
     '#movie',
-    `https://github.com/ysm-dev/movie-noti/raw/main/temp/future.png?${randomString}`,
+    `https://github.com/ysm-dev/movie-noti/raw/main/temp/${currentDate}.png`,
   )
 }
 

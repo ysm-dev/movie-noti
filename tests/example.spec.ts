@@ -21,13 +21,15 @@ test('Screenshot movie info and send discord message', async ({
 
   await Promise.all([page1.evaluate(remove), page2.evaluate(remove)])
 
+  const currentDate = new Date().toISOString().split('T')[0]
+
   await Promise.all([
     page1
       .locator('._au_movie_list_content_wrap')
-      .screenshot({ path: `./temp/current.png` }),
+      .screenshot({ path: `./temp/${currentDate}.png` }),
     page2
       .locator('._au_movie_list_content_wrap')
-      .screenshot({ path: `./temp/future.png` }),
+      .screenshot({ path: `./temp/${currentDate}.png` }),
   ])
 
   await page1.close()

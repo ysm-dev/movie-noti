@@ -12,11 +12,11 @@
   },
   "devDependencies": {
     "@fxts/core": "^1.0.1",
-    "@playwright/test": "^1.45.1",
-    "@types/node": "^20.14.10",
+    "@playwright/test": "^1.45.2",
+    "@types/node": "^20.14.11",
     "@vercel/style-guide": "^6.0.0",
     "prettier": "^3.3.3",
-    "taze": "^0.15.0",
+    "taze": "^0.16.1",
     "typescript": "^5.5.3"
   },
   "dependencies": {

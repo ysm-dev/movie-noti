@@ -13,10 +13,10 @@
   "devDependencies": {
     "@fxts/core": "^1.0.1",
     "@playwright/test": "^1.46.1",
-    "@types/node": "^22.5.0",
+    "@types/node": "^22.5.2",
     "@vercel/style-guide": "^6.0.0",
     "prettier": "^3.3.3",
-    "taze": "^0.16.6",
+    "taze": "^0.16.7",
     "typescript": "^5.5.4"
   },
   "dependencies": {

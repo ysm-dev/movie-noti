@@ -15,12 +15,12 @@
     "@playwright/test": "^1.49.0",
     "@types/node": "^22.10.1",
     "@vercel/style-guide": "^6.0.0",
-    "prettier": "^3.4.1",
+    "prettier": "^3.4.2",
     "taze": "^0.18.0",
     "typescript": "^5.7.2"
   },
   "dependencies": {
     "cids": "^1.1.9",
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.7"
   }
 }

@@ -16,8 +16,8 @@
     "@types/node": "^22.10.5",
     "@vercel/style-guide": "^6.0.0",
     "prettier": "^3.4.2",
-    "taze": "^0.18.0",
-    "typescript": "^5.7.2"
+    "taze": "^18.1.0",
+    "typescript": "^5.7.3"
   },
   "dependencies": {
     "cids": "^1.1.9",

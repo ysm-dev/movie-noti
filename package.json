@@ -11,12 +11,12 @@
     "bump": "taze major -w -i"
   },
   "devDependencies": {
-    "@fxts/core": "^1.6.0",
+    "@fxts/core": "^1.7.0",
     "@playwright/test": "^1.51.1",
-    "@types/node": "^22.13.11",
+    "@types/node": "^22.13.14",
     "@vercel/style-guide": "^6.0.0",
     "prettier": "^3.5.3",
-    "taze": "^19.0.2",
+    "taze": "^19.0.4",
     "typescript": "^5.8.2"
   },
   "dependencies": {

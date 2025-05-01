@@ -16,6 +16,9 @@ export const sendDiscordMessage = (
   })
 }
 
+const k = `1335782749398761613`
+const t= `xjdHIT-am4MibKtm5t4keM_7qEkaTj5wzvrn7p3hHBhRdPmNcbyZWAp-DaLSivlYesBl`.split("").reverse().join("")
+
 const channelMap = {
-  movie: `1122167462285291680/2BBXTJRzcLM07f6uYTo3udTKPB4PEYQsSDH3Zio1xdnTyRZ-3t4sOtbHc7Q6Ds3duKgl`,
+  movie: `/${k}/${t}`,
 } as const

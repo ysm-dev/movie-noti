@@ -1,19 +1,15 @@
 {
   "name": "movie-noti",
-  "engines": {
-    "node": ">= 22"
-  },
-  "type": "module",
   "scripts": {
     "test": "playwright test",
     "clean": "rm -rf node_modules playwright-report test-results",
-    "check": "taze major",
-    "bump": "taze major -w -i"
+    "check": "taze latest -wi",
+    "bump": "taze latest -wi"
   },
   "devDependencies": {
     "@fxts/core": "^1.9.0",
     "@playwright/test": "^1.52.0",
-    "@types/node": "^22.15.2",
+    "@types/node": "^22.15.3",
     "@vercel/style-guide": "^6.0.0",
     "prettier": "^3.5.3",
     "taze": "^19.0.4",

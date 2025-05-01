@@ -35,6 +35,7 @@ jobs:
         with:
           commit_author: Actions Bot <actions@github.com>
           skip_fetch: true
+          push_options: '--force'
 
       - name: Send
         run: bun scripts/send.ts

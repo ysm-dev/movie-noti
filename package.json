@@ -8,8 +8,8 @@
   },
   "devDependencies": {
     "@fxts/core": "^1.13.2",
-    "@playwright/test": "^1.53.2",
-    "@types/node": "^24.0.10",
+    "@playwright/test": "^1.54.1",
+    "@types/node": "^24.0.13",
     "@vercel/style-guide": "^6.0.0",
     "prettier": "^3.6.2",
     "taze": "^19.1.0",
@@ -17,6 +17,6 @@
   },
   "dependencies": {
     "cids": "^1.1.9",
-    "dotenv": "^17.0.1"
+    "dotenv": "^17.2.0"
   }
 }

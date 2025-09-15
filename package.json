@@ -7,16 +7,16 @@
     "bump": "taze latest -wi"
   },
   "devDependencies": {
-    "@fxts/core": "^1.15.0",
+    "@fxts/core": "^1.17.0",
     "@playwright/test": "^1.55.0",
-    "@types/node": "^24.3.1",
+    "@types/node": "^24.4.0",
     "@vercel/style-guide": "^6.0.0",
     "prettier": "^3.6.2",
-    "taze": "^19.5.0",
+    "taze": "^19.6.0",
     "typescript": "^5.9.2"
   },
   "dependencies": {
     "cids": "^1.1.9",
-    "dotenv": "^17.2.1"
+    "dotenv": "^17.2.2"
   }
 }

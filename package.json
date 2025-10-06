@@ -9,14 +9,14 @@
   "devDependencies": {
     "@fxts/core": "^1.17.0",
     "@playwright/test": "^1.55.0",
-    "@types/node": "^24.5.2",
+    "@types/node": "^24.6.2",
     "@vercel/style-guide": "^6.0.0",
     "prettier": "^3.6.2",
     "taze": "^19.7.0",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.3"
   },
   "dependencies": {
     "cids": "^1.1.9",
-    "dotenv": "^17.2.2"
+    "dotenv": "^17.2.3"
   }
 }

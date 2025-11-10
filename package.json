@@ -4,19 +4,19 @@
     "test": "playwright test",
     "clean": "rm -rf node_modules playwright-report test-results",
     "check": "taze latest -wi",
-    "bump": "taze latest -wi"
+    "bump": "taze latest -wil"
   },
   "devDependencies": {
-    "@fxts/core": "^1.19.0",
-    "@playwright/test": "^1.56.1",
-    "@types/node": "^24.9.2",
-    "@vercel/style-guide": "^6.0.0",
-    "prettier": "^3.6.2",
-    "taze": "^19.9.0",
-    "typescript": "^5.9.3"
+    "@fxts/core": "1.19.0",
+    "@playwright/test": "1.56.1",
+    "@types/node": "24.10.0",
+    "@vercel/style-guide": "6.0.0",
+    "prettier": "3.6.2",
+    "taze": "19.9.0",
+    "typescript": "5.9.3"
   },
   "dependencies": {
-    "cids": "^1.1.9",
-    "dotenv": "^17.2.3"
+    "cids": "1.1.9",
+    "dotenv": "17.2.3"
   }
 }

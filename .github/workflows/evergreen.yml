@@ -16,15 +16,15 @@ jobs:
       pull-requests: write
 
     steps:
-      - uses: actions/checkout@main
-      - uses: actions/setup-node@main
+      - uses: actions/checkout@v5
+      - uses: oven-sh/setup-bun@v2
         with:
-          node-version: latest
+          bun-version: latest
 
-      - run: npm i -g pnpm yarn bun @antfu/ni
-      - run: nlx taze latest -wi
+      - run: bun i
+      - run: bun bump
 
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@main
+        uses: peter-evans/create-pull-request@v7
         with:
           title: Bump dependencies

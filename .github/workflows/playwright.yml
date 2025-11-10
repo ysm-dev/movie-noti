@@ -14,8 +14,8 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - uses: oven-sh/setup-bun@main
+      - uses: actions/checkout@v5
+      - uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
 
@@ -31,7 +31,7 @@ jobs:
       - name: Run Playwright tests
         run: bun run test --project chromium
 
-      - uses: stefanzweifel/git-auto-commit-action@master
+      - uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_author: Actions Bot <actions@github.com>
           skip_fetch: true

@@ -9,9 +9,9 @@
         "dotenv": "17.2.3",
       },
       "devDependencies": {
-        "@fxts/core": "1.19.0",
+        "@fxts/core": "1.20.0",
         "@playwright/test": "1.56.1",
-        "@types/node": "24.10.0",
+        "@types/node": "24.10.1",
         "@vercel/style-guide": "6.0.0",
         "prettier": "3.6.2",
         "taze": "19.9.0",
@@ -70,7 +70,7 @@
 
     "@eslint/js": ["@eslint/js@8.57.1", "", {}, "sha512-d9zaMRSTIKDLhctzH12MtXvJKSSUhaHcjV+2Z+GK+EEY7XKpP5yR4x+N3TAcHTcu963nIr+TMcCb4DBCYX1z6Q=="],
 
-    "@fxts/core": ["@fxts/core@1.19.0", "", { "dependencies": { "tslib": "^2.6.0" } }, "sha512-8vWBhYGwn258i5TalQin0uzmAJI9qgq8nXjf1PLd8DHjlcs5bfqyZVT1FHqnBVyAH3ojjfLQ2Zb2+oisG2aTcQ=="],
+    "@fxts/core": ["@fxts/core@1.20.0", "", { "dependencies": { "tslib": "^2.6.0" } }, "sha512-f6NNS0pu7K72sYKf85GKnkTNGpQsWUNJ3VH8qMTofiRWAksa491Yvne8v0extMjBnI3+aPs4m3OKITgvVyZbeg=="],
 
     "@humanwhocodes/config-array": ["@humanwhocodes/config-array@0.13.0", "", { "dependencies": { "@humanwhocodes/object-schema": "^2.0.3", "debug": "^4.3.1", "minimatch": "^3.0.5" } }, "sha512-DZLEEqFWQFiyK6h5YIeynKx7JlvCYWL0cImfSRXZ9l4Sg2efkFGTuFf6vzXjK1cq6IYkU+Eg/JizXw+TD2vRNw=="],
 
@@ -122,7 +122,7 @@
 
     "@types/json5": ["@types/json5@0.0.29", "", {}, "sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ=="],
 
-    "@types/node": ["@types/node@24.10.0", "", { "dependencies": { "undici-types": "~7.16.0" } }, "sha512-qzQZRBqkFsYyaSWXuEHc2WR9c0a0CXwiE5FWUvn7ZM+vdy1uZLfCunD38UzhuB7YN/J11ndbDBcTmOdxJo9Q7A=="],
+    "@types/node": ["@types/node@24.10.1", "", { "dependencies": { "undici-types": "~7.16.0" } }, "sha512-GNWcUTRBgIRJD5zj+Tq0fKOJ5XZajIiBroOF0yvj2bSU1WvNdYS/dn9UxwsujGW4JX06dnHyjV2y9rRaybH0iQ=="],
 
     "@types/normalize-package-data": ["@types/normalize-package-data@2.4.4", "", {}, "sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA=="],
 

@@ -7,7 +7,7 @@
     "bump": "taze latest -wil"
   },
   "devDependencies": {
-    "@fxts/core": "1.20.0",
+    "@fxts/core": "1.21.0",
     "@playwright/test": "1.56.1",
     "@types/node": "24.10.1",
     "@vercel/style-guide": "6.0.0",

@@ -9,11 +9,11 @@
         "dotenv": "17.2.3",
       },
       "devDependencies": {
-        "@fxts/core": "1.21.0",
+        "@fxts/core": "1.21.1",
         "@playwright/test": "1.57.0",
         "@types/node": "24.10.1",
         "@vercel/style-guide": "6.0.0",
-        "prettier": "3.7.3",
+        "prettier": "3.7.4",
         "taze": "19.9.2",
         "typescript": "5.9.3",
       },
@@ -70,7 +70,7 @@
 
     "@eslint/js": ["@eslint/js@8.57.1", "", {}, "sha512-d9zaMRSTIKDLhctzH12MtXvJKSSUhaHcjV+2Z+GK+EEY7XKpP5yR4x+N3TAcHTcu963nIr+TMcCb4DBCYX1z6Q=="],
 
-    "@fxts/core": ["@fxts/core@1.21.0", "", { "dependencies": { "tslib": "^2.6.0" } }, "sha512-O86Z/k/+xQbFmD0JdStqohJ4om5+4OkGVly4cao12EYgcMCyecb7zo6hqglJ0OdZh1UkozkIa8YGFrfYgb0oew=="],
+    "@fxts/core": ["@fxts/core@1.21.1", "", { "dependencies": { "tslib": "^2.6.0" } }, "sha512-c9SkBOSm/g5R9mA6T5jup1v95Ny0Qwy/229widB5+YOIi1udy63hNnwUJWWBpO0iZGJEKSvfI80LUo/OoULtuw=="],
 
     "@humanwhocodes/config-array": ["@humanwhocodes/config-array@0.13.0", "", { "dependencies": { "@humanwhocodes/object-schema": "^2.0.3", "debug": "^4.3.1", "minimatch": "^3.0.5" } }, "sha512-DZLEEqFWQFiyK6h5YIeynKx7JlvCYWL0cImfSRXZ9l4Sg2efkFGTuFf6vzXjK1cq6IYkU+Eg/JizXw+TD2vRNw=="],
 
@@ -682,7 +682,7 @@
 
     "prelude-ls": ["prelude-ls@1.2.1", "", {}, "sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g=="],
 
-    "prettier": ["prettier@3.7.3", "", { "bin": { "prettier": "bin/prettier.cjs" } }, "sha512-QgODejq9K3OzoBbuyobZlUhznP5SKwPqp+6Q6xw6o8gnhr4O85L2U915iM2IDcfF2NPXVaM9zlo9tdwipnYwzg=="],
+    "prettier": ["prettier@3.7.4", "", { "bin": { "prettier": "bin/prettier.cjs" } }, "sha512-v6UNi1+3hSlVvv8fSaoUbggEM5VErKmmpGA7Pl3HF8V6uKY7rvClBOJlH6yNwQtfTueNkGVpOv/mtWL9L4bgRA=="],
 
     "prettier-plugin-packagejson": ["prettier-plugin-packagejson@2.5.19", "", { "dependencies": { "sort-package-json": "3.4.0", "synckit": "0.11.11" }, "peerDependencies": { "prettier": ">= 1.16.0" }, "optionalPeers": ["prettier"] }, "sha512-Qsqp4+jsZbKMpEGZB1UP1pxeAT8sCzne2IwnKkr+QhUe665EXUo3BAvTf1kAPCqyMv9kg3ZmO0+7eOni/C6Uag=="],
 

@@ -9,7 +9,7 @@
         "dotenv": "17.2.3",
       },
       "devDependencies": {
-        "@fxts/core": "1.21.1",
+        "@fxts/core": "1.23.0",
         "@playwright/test": "1.57.0",
         "@types/node": "25.0.3",
         "@vercel/style-guide": "6.0.0",
@@ -70,7 +70,7 @@
 
     "@eslint/js": ["@eslint/js@8.57.1", "", {}, "sha512-d9zaMRSTIKDLhctzH12MtXvJKSSUhaHcjV+2Z+GK+EEY7XKpP5yR4x+N3TAcHTcu963nIr+TMcCb4DBCYX1z6Q=="],
 
-    "@fxts/core": ["@fxts/core@1.21.1", "", { "dependencies": { "tslib": "^2.6.0" } }, "sha512-c9SkBOSm/g5R9mA6T5jup1v95Ny0Qwy/229widB5+YOIi1udy63hNnwUJWWBpO0iZGJEKSvfI80LUo/OoULtuw=="],
+    "@fxts/core": ["@fxts/core@1.23.0", "", { "dependencies": { "tslib": "^2.6.0" } }, "sha512-URaV1oAhU64s4zfhzMIAB444aDB1fyLHcS7tEw3TrHll7YExbks/FimjrJN2MXrHVB0jXBtGeTTpW5k40R7NXg=="],
 
     "@humanwhocodes/config-array": ["@humanwhocodes/config-array@0.13.0", "", { "dependencies": { "@humanwhocodes/object-schema": "^2.0.3", "debug": "^4.3.1", "minimatch": "^3.0.5" } }, "sha512-DZLEEqFWQFiyK6h5YIeynKx7JlvCYWL0cImfSRXZ9l4Sg2efkFGTuFf6vzXjK1cq6IYkU+Eg/JizXw+TD2vRNw=="],
 

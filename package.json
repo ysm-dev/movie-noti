@@ -9,7 +9,7 @@
   "devDependencies": {
     "@fxts/core": "1.23.0",
     "@playwright/test": "1.57.0",
-    "@types/node": "25.0.3",
+    "@types/node": "25.0.6",
     "@vercel/style-guide": "6.0.0",
     "prettier": "3.7.4",
     "taze": "19.9.2",

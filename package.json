@@ -13,7 +13,7 @@
     "@vercel/style-guide": "6.0.0",
     "prettier": "3.8.1",
     "taze": "19.10.0",
-    "typescript": "5.9.3"
+    "typescript": "6.0.2"
   },
   "dependencies": {
     "cids": "1.1.9",

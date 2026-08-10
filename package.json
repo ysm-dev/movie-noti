@@ -7,13 +7,13 @@
     "bump": "taze latest -wil"
   },
   "devDependencies": {
-    "@fxts/core": "1.26.0",
-    "@playwright/test": "1.60.0",
-    "@types/node": "25.9.3",
+    "@fxts/core": "2.0.1",
+    "@playwright/test": "1.62.1",
+    "@types/node": "26.2.0",
     "@vercel/style-guide": "6.0.0",
-    "prettier": "3.8.4",
-    "taze": "19.14.1",
-    "typescript": "6.0.3"
+    "prettier": "3.9.6",
+    "taze": "20.0.0",
+    "typescript": "7.0.2"
   },
   "dependencies": {
     "cids": "1.1.9",

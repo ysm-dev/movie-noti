@@ -16,18 +16,18 @@ jobs:
       pull-requests: write
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
       - uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
-      - uses: actions/setup-node@v6
-        with:
-          node-version: latest
 
+      # Run before `bun i` so taze sees no node_modules yet and also bumps .nvmrc
+      - run: bunx taze latest -wl
       - run: bun i
-      - run: bun bump
 
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
+          token: ${{ secrets.EVERGREEN_TOKEN }}
           title: Bump dependencies
+          delete-branch: true

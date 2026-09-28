@@ -11,10 +11,10 @@
   },
   "devDependencies": {
     "@playwright/test": "1.63.0",
-    "@types/node": "26.6.2",
+    "@types/node": "26.6.3",
     "@vercel/style-guide": "6.0.0",
-    "prettier": "3.9.8",
-    "taze": "21.1.0",
+    "prettier": "3.9.9",
+    "taze": "21.2.0",
     "typescript": "7.0.2"
   }
 }
